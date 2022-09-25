@@ -2,7 +2,6 @@
 async-generator==1.10
 attrs==22.1.0
 beautifulsoup4==4.11.1
-certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_05nm_gqf36/croots/recipe/certifi_1663615689491/work/certifi
 charset-normalizer==2.1.1
 h11==0.13.0
 html5lib==1.1
