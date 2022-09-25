@@ -4,14 +4,14 @@ A demo scraper for https://www.keysearch.co/ including login and reCaptcha bypas
 
 ## How to run 
 
-### Prerequisites
+### Pre-requisites
 You need Chrome installed in the default location of your system: https://www.google.de/chrome/ .
 Furthermore, you need the Chromedriver, which you can find in this repo. If you prefer to download the driver seperately:
 1. Got to https://chromedriver.chromium.org/downloads and download.
 2. After cloning the repo, open the keysearch_scrape.py file. Find the open_login_page() function and change the path in webdriver.Chrome() to the path of your Chromedriver.
 
 
-### Setup Enviorment and Project
+### Setup enviorment and project
 1. Connect to your server and navigate in the desired directory.
 
 2. Install and create [miniconda] (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html).
