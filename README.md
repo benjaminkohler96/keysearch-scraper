@@ -27,6 +27,9 @@ conda activate venvKeysearch
 #clone repo
 git clone https://github.com/benjaminkohler96/keysearch-scraper
 
+#move to directory
+cd keysearch-scraper
+
 #install requirements
 pip install -r requirements.txt
 ```  
