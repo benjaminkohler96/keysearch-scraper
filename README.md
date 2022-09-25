@@ -1,4 +1,4 @@
-# keysearch-scraper
+# Keysearch Scraper
 A demo scraper for https://www.keysearch.co/ including reCaptcha bypass.
 
 
