@@ -14,7 +14,12 @@ Furthermore, you need the Chromedriver, which you can find in this repo. If you 
 ### Setup enviorment and project
 1. Connect to your server and navigate in the desired directory.
 
-2. Install and create [miniconda] (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html).
+2. Install [miniconda] (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html).
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
   
 3. Create a virtual enviroment and activate it.
 ```
@@ -36,7 +41,7 @@ pip install -r requirements.txt
 
 5. Run the script.
 ```
-  python keysearch_scrape.py
+python keysearch_scrape.py
 ```
 
 ## Contact
