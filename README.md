@@ -1,5 +1,5 @@
 # keysearch-scraper
-A demo scraper for https://www.keysearch.co/ including login and reCaptcha bypass.
+A demo scraper for https://www.keysearch.co/ including reCaptcha bypass.
 
 
 ## How to run 
