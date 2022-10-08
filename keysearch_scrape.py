@@ -5,6 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 """This code includes credentials. I know this not best practice, but I want the code to be as smooth as possible for you to run.
@@ -17,10 +19,16 @@ Thanks!
 
 url_login = 'https://www.keysearch.co/user/login'
 
+def setup_driver():
+    print("Downloading driver")
+    global driver
+
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
+
 def open_login_page():
     """Open Login Page"""
-    global driver
-    driver = webdriver.Chrome("./chromedriver")
+    setup_driver()
     driver.get(url_login)
     time.sleep(2)
 
