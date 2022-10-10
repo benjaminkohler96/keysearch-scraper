@@ -5,11 +5,7 @@ A demo scraper for https://www.keysearch.co/ including reCaptcha bypass.
 ## How to run 
 
 ### Pre-requisites
-You need Chrome installed in the default location of your system: https://www.google.de/chrome/ .
-Furthermore, you need the Chromedriver, which you can find in this repo (Mac version). If you prefer to download the driver seperately:
-1. Got to https://chromedriver.chromium.org/downloads and download the appropriate version.
-2. After cloning the repo, open the keysearch_scrape.py file. Find the open_login_page() function and change the path in webdriver.Chrome() to the path of your Chromedriver. Alternatively, you can replace the Chromedriver in the directory with the downloaded version.
-
+You need Chrome installed in the default location of your system: https://www.google.de/chrome/.
 
 ### Setup enviorment and project
 1. Connect to your server and navigate in the desired directory.
