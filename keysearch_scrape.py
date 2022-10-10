@@ -8,16 +8,22 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-
-"""This code includes credentials. I know this not best practice, but I want the code to be as smooth as possible for you to run.
-Please do not share this code with my credentials included. I will change the api key in a month or so.
-If you want to run the code, you need to create a free account at https://2captcha.com/ and insert your API key in the get_recaptcha_response() function.
-Additionally, you need to create a free account at https://www.keysearch.co/ and insert your credentials in the enter_credentials() function.
-Thanks!
-"""
+import os
+from dotenv import load_dotenv
 
 
 url_login = 'https://www.keysearch.co/user/login'
+
+def check_global_variables():
+    """Check if global variables are set"""
+    load_dotenv()
+    try:
+        os.getenv('2CAPTCHA-API-KEY')
+    except :
+        print("Global variables not set. Please set them in your .env file. See README.md for more information or contact zrx938@alumni.ku.dk.")
+        exit()
+
+
 
 def setup_driver():
     print("Downloading driver")
@@ -34,14 +40,14 @@ def open_login_page():
 
 def enter_credentials():
     """Enter Credentials"""
-    driver.find_element(By.ID,"identity").send_keys("zrx938@alumni.ku.dk")
-    driver.find_element(By.ID,"password").send_keys("2d.BfjCPvp54YnJ")
+    driver.find_element(By.ID,"identity").send_keys(os.getenv('USERNAME'))
+    driver.find_element(By.ID,"password").send_keys(os.getenv('PASSWORD'))
     time.sleep(2)
 
 
 def get_recaptcha_response():
     """Get Response from 2 Captcha"""
-    solver = TwoCaptcha("7f8967fc1089e4a8be75319905a4865e")
+    solver = TwoCaptcha(os.getenv('2CAPTCHA-API-KEY'))
 
     try:
         result = solver.recaptcha(
@@ -110,6 +116,7 @@ def save_df(df):
 
 
 def login_main():
+    check_global_variables()
     open_login_page()
     enter_credentials()
     print("Waiting for 2Captcha response. This can take a while (up to 2 minutes)...")
