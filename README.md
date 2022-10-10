@@ -6,6 +6,7 @@ A demo scraper for https://www.keysearch.co/ including reCaptcha bypass.
 
 ### Pre-requisites
 You need Chrome installed in the default location of your system: https://www.google.de/chrome/.
+Furthermore you need a .env file with the 2Captcha-python key and the credentials for keysearcher. If you do not have these, send me an email: zrx938@alumni.ku.dk.
 
 ### Setup enviorment and project
 1. Connect to your server and navigate in the desired directory.
